@@ -1,0 +1,33 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "b4779493-3453-453b-989e-2a1388af41d6",
+        "clusterUri": "https://trd-4ws33ck6y8ux9e918j.z3.kusto.fabric.microsoft.com",
+        "type": "Fabric",
+        "databaseItemId": "TelemetryDataEH"
+      },
+      {
+        "id": "7281405a-f6ae-4c59-aebb-3ece6e49e33e",
+        "clusterUri": "https://trd-4ws33ck6y8ux9e918j.z3.kusto.fabric.microsoft.com",
+        "type": "Fabric",
+        "databaseItemId": "TelemetryDataEH"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "d9413bfb-7ead-42f7-a894-cf12f7df5aab",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\n// YOUR_TABLE_HERE\n// | take 100\n\n// See how many records are in the table.\n// YOUR_TABLE_HERE\n// | count\n\n// This query returns the number of ingestions per hour in the given table.\n// YOUR_TABLE_HERE\n// | summarize IngestionCount = count() by bin(ingestion_time(), 1h)\n\nFreezerTelemetry\n| where freezerId == 'S-PAR-01'\n\n",
+        "title": "Tab",
+        "dataSourceId": "7281405a-f6ae-4c59-aebb-3ece6e49e33e"
+      },
+      {
+        "id": "302eedac-f7c7-48b8-b26e-e0d191741db9",
+        "content": "FreezerTelemetry\n| where freezerId == \"F-PAR-01\"\n",
+        "title": "",
+        "dataSourceId": "7281405a-f6ae-4c59-aebb-3ece6e49e33e"
+      }
+    ]
+  }
+}

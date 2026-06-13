@@ -1,0 +1,56 @@
+table product
+	lineageTag: 357fff75-1660-4301-bdb4-488cb913dd35
+	sourceLineageTag: [dbo].[product]
+
+	column ProductId
+		dataType: string
+		lineageTag: 38b29b30-79d8-4e70-a2b1-eb3c1b60d78f
+		sourceLineageTag: ProductId
+		summarizeBy: none
+		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: 1afcbbfe-bd62-4037-99f6-80692c83075f
+		sourceLineageTag: ProductName
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: f42bc85d-d4c5-4754-9d58-005d038eab22
+		sourceLineageTag: Category
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: string
+		lineageTag: ba1ecf03-02ec-43c8-9c80-0811cfc09e28
+		sourceLineageTag: Subcategory
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: 2ed8372a-c933-417d-986a-2961b0008ad0
+		sourceLineageTag: Brand
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	partition product = entity
+		mode: directLake
+		source
+			entityName: product
+			schemaName: dbo
+			expressionSource: 'DirectLake - OntologyDataLH'
+

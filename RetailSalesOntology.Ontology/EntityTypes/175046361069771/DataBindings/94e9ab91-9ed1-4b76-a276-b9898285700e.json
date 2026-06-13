@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "94e9ab91-9ed1-4b76-a276-b9898285700e",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "City",
+        "targetPropertyId": "2480508428725385367"
+      },
+      {
+        "sourceColumnName": "Latitude",
+        "targetPropertyId": "2480508428658812680"
+      },
+      {
+        "sourceColumnName": "Longitude",
+        "targetPropertyId": "2480508429982025398"
+      },
+      {
+        "sourceColumnName": "Region",
+        "targetPropertyId": "2480508428852838869"
+      },
+      {
+        "sourceColumnName": "StoreId",
+        "targetPropertyId": "2480508432354959689"
+      },
+      {
+        "sourceColumnName": "StoreName",
+        "targetPropertyId": "2480508432724398928"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "06617c91-0465-918f-45f6-256223a2a15b",
+      "sourceTableName": "store",
+      "sourceSchema": "dbo"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+table freezer
+	lineageTag: 4eeb78ef-0929-4d44-bd55-5373f868ad2e
+	sourceLineageTag: [dbo].[freezer]
+
+	column FreezerId
+		dataType: string
+		lineageTag: fc322874-92ab-4e15-bf9f-6a2b5d6b530c
+		sourceLineageTag: FreezerId
+		summarizeBy: none
+		sourceColumn: FreezerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Model
+		dataType: string
+		lineageTag: d51fa7cd-ee28-414d-b7dd-0063319eb311
+		sourceLineageTag: Model
+		summarizeBy: none
+		sourceColumn: Model
+
+		annotation SummarizationSetBy = Automatic
+
+	column minSafeTempC
+		dataType: double
+		lineageTag: 3455f5b4-d2d3-4e63-806d-7a73ee5271db
+		sourceLineageTag: minSafeTempC
+		summarizeBy: sum
+		sourceColumn: minSafeTempC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StoreId
+		dataType: string
+		lineageTag: 80b701a7-b9fc-4d0b-b1e0-499fdcb151ad
+		sourceLineageTag: StoreId
+		summarizeBy: none
+		sourceColumn: StoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition freezer = entity
+		mode: directLake
+		source
+			entityName: freezer
+			schemaName: dbo
+			expressionSource: 'DirectLake - OntologyDataLH'
+

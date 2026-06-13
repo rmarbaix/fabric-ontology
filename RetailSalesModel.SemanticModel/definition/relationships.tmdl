@@ -1,0 +1,12 @@
+relationship 97b7f7ff-efba-321f-e36e-99787a620247
+	fromColumn: sales.ProductId
+	toColumn: product.ProductId
+
+relationship eb5f4452-ea73-d581-8b8d-632a01a81ed9
+	fromColumn: sales.StoreId
+	toColumn: store.StoreId
+
+relationship 3f9abfc4-426a-80fd-52c5-d24591bd3481
+	fromColumn: freezer.StoreId
+	toColumn: store.StoreId
+

@@ -1,0 +1,69 @@
+table store
+	lineageTag: d20dc502-85e6-4c55-8a94-aac9523c643a
+	sourceLineageTag: [dbo].[store]
+
+	column StoreId
+		dataType: string
+		lineageTag: b20a79e2-3bf8-4ae9-b412-233477c4df8f
+		sourceLineageTag: StoreId
+		summarizeBy: none
+		sourceColumn: StoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreName
+		dataType: string
+		lineageTag: 5b6dc4be-98d7-4414-9645-6f27d9df0da3
+		sourceLineageTag: StoreName
+		summarizeBy: none
+		sourceColumn: StoreName
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: ce10a6d8-e493-4fcc-961d-934ed95f420e
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 53ac3571-c9cc-4ba2-8e37-911bf7835d2d
+		sourceLineageTag: Region
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		lineageTag: c74990b5-85ee-4e91-8af2-b5bd8b9fe81c
+		sourceLineageTag: Latitude
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: ad17cfe6-c142-44f1-809f-6a98455832aa
+		sourceLineageTag: Longitude
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition store = entity
+		mode: directLake
+		source
+			entityName: store
+			schemaName: dbo
+			expressionSource: 'DirectLake - OntologyDataLH'
+
